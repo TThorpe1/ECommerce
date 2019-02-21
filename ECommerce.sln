@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon", "Amazon\Amazon.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory", "Inventory\Inventory.csproj", "{C6F390A0-22AF-40D2-9084-5BB1A096AD19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryDataAccess", "InventoryDataAccess\InventoryDataAccess.csproj", "{6193863E-B315-4989-B63C-AD118D4393E5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{C6F390A0-22AF-40D2-9084-5BB1A096AD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F390A0-22AF-40D2-9084-5BB1A096AD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6F390A0-22AF-40D2-9084-5BB1A096AD19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6193863E-B315-4989-B63C-AD118D4393E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6193863E-B315-4989-B63C-AD118D4393E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6193863E-B315-4989-B63C-AD118D4393E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6193863E-B315-4989-B63C-AD118D4393E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

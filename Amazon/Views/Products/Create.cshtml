@@ -1,0 +1,16 @@
+﻿@model Amazon.Models.Inventory
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm(new { ID = ViewData["Id"] }))
+{
+    @Html.LabelFor(model => model.Quantity)
+    @Html.EditorFor(model => model.Quantity)
+
+    <button type="submit">Order</button>
+}

@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using Amazon.DAL;
 using Amazon.Models;
+using System.Net.Http;
 
 namespace Amazon.Controllers
 {
@@ -36,8 +37,28 @@ namespace Amazon.Controllers
             }
             return View(product);
         }
+        public ActionResult Create(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
 
-       
+            ViewData["Id"] = id;
+
+            return View();
+        }
+        [HttpPost]
+        public async Task<ActionResult> Create(Inventory inventory)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:55761/");
+            var response = await client.PutAsJsonAsync($"api/inventories/{inventory.ID}", inventory);
+
+            return RedirectToAction("Details", new { Id = inventory.ID });
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
